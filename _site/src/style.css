@@ -1,0 +1,218 @@
+:root {
+  --font-fallback: "Helvetica Neue", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", , sans-sans;
+
+  --color-primary: #2860f5;
+  --color-secondary: #faf7ef;
+  --color-accent: #005f76;
+
+  --color-gray: #faf7ef;
+  --color-hero-bg: #e4e4e4;
+  --color-gray-border: #dddddd;
+  --font-small: 14px;
+  --font-base: 1rem;
+}
+
+@font-face {
+  font-family: "PlusJakartaSans";
+  src: url("./font/PlusJakartaSans-VariableFont_wght.ttf")
+      format("truetype-variations"),
+    url("./font/PlusJakartaSans-Italic-VariableFont_wght.ttf")
+      format("truetype-variations");
+  font-weight: 100 1000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PlusJakartaSans";
+}
+/* , var(--font-fallback) */
+
+header {
+  width: 100%;
+  background: white;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px #ddd;
+  z-index: 5000;
+}
+
+section {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-wrapper {
+  padding: 0.75rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 576px;
+}
+
+.btn {
+  vertical-align: middle;
+  width: fit-content;
+  min-width: 2.25rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: solid 1px transparent;
+  border-radius: 0.5rem;
+  text-align: center;
+  display: inline-block;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn::before {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-primary {
+  background: linear-gradient(var(--color-primary), var(--color-primary))
+      padding-box,
+    linear-gradient(180deg, #2860f5 0%, #0a43db 100%) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0px 4px 0px 0px #e9eeff24 inset, 0px 3px 2px 0px #2860f52e;
+  color: white;
+}
+.btn-primary:hover {
+  background: linear-gradient(var(--color-primary), var(--color-primary))
+      padding-box,
+    linear-gradient(0deg, #2860f5 0%, #0a43db 100%) border-box;
+  border: 2px solid transparent;
+  box-shadow: 0px 0px 4px 0px #e9eeff24 inset, 0px 3px 2px 0px #2860f52e;
+  color: white;
+}
+
+.icon-list::after {
+  height: 0px;
+  content: url("./icon/list.svg");
+}
+
+.w-full {
+  width: 100%;
+}
+.w-50 {
+  width: 50%;
+}
+.mt-2 {
+  margin-top: 4px;
+}
+.mt-4 {
+  margin-top: 1rem;
+}
+.ml-3 {
+  margin-left: 0.5rem;
+}
+
+.hero {
+  margin-top: 3.875rem;
+  min-height: 22.5rem;
+  background: var(--color-hero-bg);
+  position: relative;
+  padding: 1rem;
+}
+
+.h1-hero {
+  font-size: 48px;
+  margin-top: 1rem;
+  margin-left: 0.5rem;
+  z-index: 1;
+}
+
+.p-hero {
+  width: 50%;
+  font-size: 14px;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  z-index: 1000;
+}
+.img-hero {
+  position: absolute;
+  right: 0rem;
+  bottom: 0;
+  width: 70%;
+  z-index: 0;
+}
+
+/* layout */
+
+.border-domain {
+  border-width: 0px 1px;
+  border-style: solid;
+  border-color: var(--color-gray-border);
+}
+
+.border-domain-bottom {
+  border-bottom: 1px solid var(--color-gray-border);
+}
+
+/* filter content */
+
+.content-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+/* text */
+.text-subtle {
+  font-size: var(--font-small);
+  /* font-weight: 600; */
+}
+.font-medium {
+  font-weight: 600;
+}
+
+.card {
+  background: var(--color-secondary);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.card-header-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header-title-source {
+  color: var(--color-accent);
+}
+
+.wrapper-badge {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.badge {
+  font-size: 14px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #dddddd;
+  padding: 0 4px;
+}
